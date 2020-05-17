@@ -6,7 +6,10 @@ const urlSchema = new mongoose.Schema({
   shortUrl: String,
   date: String,
   longUrlSize: Number,
-  shortUrlSize: Number
+  shortUrlSize: Number,
+  isCustom: {
+    type: Boolean,
+    default: false}
 })
 
 module.exports = mongoose.model('Url', urlSchema);
